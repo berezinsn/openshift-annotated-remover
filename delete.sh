@@ -29,10 +29,6 @@ do
 
   #Total remove of unpaid projects and writing deletion time corresponding prj_name into logfile
   out=`${oc_path} delete project $rm_prj`
-  result="${out} at `date -u '+%H:%M:%S UTC time %Y-%m-%d'` | Project age was ${time} seconds" 
-    if [[ "$out" != "" ]];then 
-      echo $result >> /var/log/deleted_unpaid_projects.log
-    fi
-   fi
- done
+  fi
+done
 
